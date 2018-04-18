@@ -2,19 +2,65 @@
   "name": "react-bulletin",
   "version": "0.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "lib/bulletin.js",
   "files": [
     "lib"
   ],
+  "scripts": {
+    "start": "cross-env NODE_ENV=development npm run build -- --watch",
+    "clean": "rm -rf ./lib",
+    "build": "rollup -c",
+    "storybook": "start-storybook -p 9001 -c storybook",
+    "prepublishOnly": "npm run build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sodalife/react-bulletin.git"
   },
-  "keywords": ["react", "bulletin"],
+  "keywords": [
+    "react",
+    "bulletin"
+  ],
   "author": "yelo <zhihuzeye@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/sodalife/react-bulletin/issues"
   },
-  "homepage": "https://github.com/sodalife/react-bulletin#readme"
+  "homepage": "https://github.com/sodalife/react-bulletin#readme",
+  "peerDependencies": {
+    "prop-types": "^15.6.1",
+    "rc-animate": "^2.4.4",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.2",
+    "@storybook/addon-knobs": "^3.4.2",
+    "@storybook/addon-options": "^3.4.2",
+    "@storybook/react": "^3.4.2",
+    "auto-prefixer": "^0.4.2",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "cssnano": "^3.10.0",
+    "md": "^0.6.0",
+    "precss": "^3.1.2",
+    "prop-types": "^15.6.1",
+    "rc-animate": "^2.4.4",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "rollup": "^0.58.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-postcss": "^1.6.1",
+    "rollup-plugin-uglify": "^3.0.0",
+    "unfetch": "^3.0.0",
+    "xss": "^0.3.8"
+  },
+  "dependencies": {}
 }
