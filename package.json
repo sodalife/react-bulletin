@@ -1,0 +1,20 @@
+{
+  "name": "react-bulletin",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sodalife/react-bulletin.git"
+  },
+  "keywords": ["react", "bulletin"],
+  "author": "yelo <zhihuzeye@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sodalife/react-bulletin/issues"
+  },
+  "homepage": "https://github.com/sodalife/react-bulletin#readme"
+}
