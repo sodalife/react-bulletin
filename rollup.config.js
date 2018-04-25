@@ -10,12 +10,6 @@ export default {
     file: 'lib/bulletin.js',
     format: 'cjs',
     name: 'bulletin',
-    globals: {
-      react: 'React',
-      'react-dom': 'ReactDOM',
-      'prop-types': 'PropTypes',
-      'rc-animate': 'RCAnimate',
-    },
   },
   external: ['react', 'react-dom', 'prop-types', 'rc-animate'],
   plugins: [
