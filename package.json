@@ -1,5 +1,5 @@
 {
-  "name": "react-bulletin",
+  "name": "@sodalife/react-bulletin",
   "version": "0.1.0",
   "description": "📢 Bulletin component for React",
   "main": "lib/bulletin.js",
