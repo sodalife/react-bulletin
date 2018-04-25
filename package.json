@@ -1,6 +1,6 @@
 {
   "name": "react-bulletin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "📢 Bulletin component for React",
   "main": "lib/bulletin.js",
   "files": [
