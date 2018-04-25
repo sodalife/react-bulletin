@@ -97,9 +97,7 @@ class App extends React.Component {
   }
 
   render() {
-    ;<div>
-      <Bulletin key={this.state.bulletin.identity} {...this.state.bulletin} />
-    </div>
+    return <Bulletin key={this.state.bulletin.identity} {...this.state.bulletin} />
   }
 }
 
