@@ -1,7 +1,7 @@
 {
   "name": "react-bulletin",
   "version": "0.0.0",
-  "description": "",
+  "description": "📢 Bulletin component for React",
   "main": "lib/bulletin.js",
   "files": [
     "lib"
@@ -19,7 +19,12 @@
   },
   "keywords": [
     "react",
-    "bulletin"
+    "component",
+    "bulletin",
+    "modal",
+    "alert",
+    "notification",
+    "notify"
   ],
   "author": "yelo <zhihuzeye@gmail.com>",
   "license": "Apache-2.0",
