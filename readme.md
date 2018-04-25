@@ -2,6 +2,10 @@
 
 > :loudspeaker: Bulletin component for React
 
+## Demo
+
+[Storybook](https://sodalife.github.io/react-bulletin)
+
 ## Screenshot
 
 ![](./_media/screenshot.png)
@@ -140,7 +144,7 @@ ReactDOM.render(<App />, document.getElementById('#app'))
 
 ## Full examples
 
-Check [Storybook online](https://sodalife.github.io/react-bulletin/) and [sources](./storybook).
+Check [Storybook online](https://sodalife.github.io/react-bulletin/) and [the sources](./storybook).
 
 Or run storybook on your own machine:
 
