@@ -28,8 +28,8 @@ import ReactDOM from 'react-dom'
 import { Bulletin } from '@sodalife/react-bulletin'
 
 ReactDOM.render(
-  <Bulletin identity="20180401.1" message="nothing important happened today" />
-  , document.getElementById('#app')
+  <Bulletin identity="20180401.1" message="nothing important happened today" />,
+  document.getElementById('#app')
 )
 ```
 
@@ -64,7 +64,8 @@ import fetch from 'unfetch'
 import md from 'md'
 import xss from 'xss'
 
-const REMOTE_BULLET_API = 'https://cors-anywhere.herokuapp.com/https://pastebin.com/raw/LWY5xHmy'
+const REMOTE_BULLET_API =
+  'https://cors-anywhere.herokuapp.com/https://pastebin.com/raw/LWY5xHmy'
 
 class App extends React.Component {
   constructor(props) {
@@ -139,7 +140,9 @@ ReactDOM.render(<App />, document.getElementById('#app'))
 
 ## Full examples
 
-Check [Storybook](./storybook):
+Check [Storybook online](https://sodalife.github.io/react-bulletin/) and [sources](./storybook).
+
+Or run storybook on your own machine:
 
 1.  Clone repository:
 

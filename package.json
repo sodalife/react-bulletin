@@ -11,7 +11,9 @@
     "clean": "rm -rf ./lib",
     "build": "rollup -c",
     "storybook": "start-storybook -p 9001 -c storybook",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "docs": "rimraf ./docs && build-storybook -c storybook -o ./docs",
+    "gh-pages": "npm run docs && gh-pages -d ./docs"
   },
   "repository": {
     "type": "git",
@@ -51,7 +53,9 @@
     "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.1.4",
     "cssnano": "^3.10.0",
+    "gh-pages": "^1.1.0",
     "md": "^0.6.0",
+    "np": "^2.20.1",
     "precss": "^3.1.2",
     "prop-types": "^15.6.1",
     "rc-animate": "^2.4.4",
@@ -67,5 +71,7 @@
     "unfetch": "^3.0.0",
     "xss": "^0.3.8"
   },
-  "dependencies": {}
+  "dependencies": {
+    "rimraf": "^2.6.2"
+  }
 }
