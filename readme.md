@@ -23,17 +23,21 @@ npm i --save react react-dom prop-types rc-animate
 ### Simplest
 
 ```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { Bulletin } from '@sodalife/react-bulletin'
 
 ReactDOM.render(
-  <Bulletin identity="20180401.1" message="nothing important happened today" />,
-  mountNode
+  <Bulletin identity="20180401.1" message="nothing important happened today" />
+  , document.getElementById('#app')
 )
 ```
 
 ### Full props
 
 ```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { Bulletin } from '@sodalife/react-bulletin'
 
 let bulletin = {
@@ -47,12 +51,14 @@ let bulletin = {
   },
 }
 
-ReactDOM.render(<Bulletin {...bulletin} />, mountNode)
+ReactDOM.render(<Bulletin {...bulletin} />, document.getElementById('#app'))
 ```
 
 ### Works with markdown or html content, from remote
 
 ```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { Bulletin } from '@sodalife/react-bulletin'
 import fetch from 'unfetch'
 import md from 'md'
@@ -92,12 +98,14 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, mountNode)
+ReactDOM.render(<App />, document.getElementById('#app'))
 ```
 
 ### Stateless functional component
 
 ```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { StatelessBulletin } from '@sodalife/react-bulletin'
 
 let bulletin = {
@@ -126,7 +134,7 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, mountNode)
+ReactDOM.render(<App />, document.getElementById('#app'))
 ```
 
 ## Full examples
