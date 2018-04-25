@@ -7,6 +7,8 @@ import xss from 'xss'
 import md from 'md'
 import { Bulletin, StatelessBulletin } from '../../lib/bulletin.js'
 
+const REMOTE_BULLET_API = 'https://cors-anywhere.herokuapp.com/https://pastebin.com/raw/LWY5xHmy'
+
 const stories = storiesOf('Bulletin', module)
 
 stories.addDecorator(withKnobs)
@@ -75,7 +77,7 @@ stories.add('stateful with ajax', () => {
     }
 
     async fetch () {
-      let { identity, title, okText, message } = await fetch('https://cors.now.sh/https://pastebin.com/raw/LWY5xHmy').then((response) => response.json())
+      let { identity, title, okText, message } = await fetch(REMOTE_BULLET_API).then((response) => response.json())
       this.setState({ identity, title, okText, message })
     }
 
@@ -120,7 +122,7 @@ stories.add('stateful + ajax + markdown + html', () => {
     }
 
     async fetch () {
-      let { identity, title, okText, message } = await fetch('https://cors.now.sh/https://pastebin.com/raw/LWY5xHmy').then((response) => response.json())
+      let { identity, title, okText, message } = await fetch(REMOTE_BULLET_API).then((response) => response.json())
 
       // note: prevent xss attacks here
       message = <div dangerouslySetInnerHTML={{ __html: xss(md(message)) }} />
