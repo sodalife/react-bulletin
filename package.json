@@ -12,8 +12,9 @@
     "build": "rollup -c",
     "storybook": "start-storybook -p 9001 -c storybook",
     "prepublishOnly": "npm run build",
-    "docs": "rimraf ./docs && build-storybook -c storybook -o ./docs",
-    "gh-pages": "npm run docs && gh-pages -d ./docs"
+    "docs": "rimraf ./docs && npm run build && build-storybook -c storybook -o ./docs",
+    "gh-pages": "npm run docs && gh-pages -d ./docs",
+    "release": "np"
   },
   "repository": {
     "type": "git",
