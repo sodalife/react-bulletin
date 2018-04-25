@@ -19,7 +19,8 @@ stories.add('stateless component', () => {
     title: text('title', '🎉 BREAKING NEWS'),
     message: text('message', 'Nothing Important Happened Today'),
     okText: text('okText', 'OK 👌'),
-    visible: boolean('visible', true)
+    visible: boolean('visible', true),
+    onOk: action('ok'),
   }
   return <span>Please control the compnent throught the Knobs panel on the right. <StatelessBulletin key={props.identity} {...props} /></span>
 })
@@ -51,7 +52,7 @@ stories.add('stateful component', () => {
       let { title, okText, message, identity } = this.state
       return <div>
         <p><button onClick={() => this.next()}>Next bulletin</button></p>
-        <Bulletin key={identity} {...{ identity, title, okText, message }} />
+        <Bulletin key={identity} {...{ identity, title, okText, message }} onOk={action('ok')} />
       </div>
     }
   }
@@ -96,7 +97,7 @@ stories.add('stateful with ajax', () => {
       return <div>
         <p><button onClick={() => this.clear()}>Clear cache</button></p>
         <p><button onClick={() => this.fetch()}>Fetch bulletin from url</button></p>
-        <Bulletin key={identity} {...{ identity, title, okText, message }} />
+        <Bulletin key={identity} {...{ identity, title, okText, message }} onOk={action('ok')} />
       </div>
     }
   }
@@ -145,7 +146,7 @@ stories.add('stateful + ajax + markdown + html', () => {
       return <div>
         <p><button onClick={() => this.clear()}>Clear cache</button></p>
         <p><button onClick={() => this.fetch()}>Fetch bulletin from url</button></p>
-        <Bulletin key={identity} {...{ identity, title, okText, message }} />
+        <Bulletin key={identity} {...{ identity, title, okText, message }} onOk={action('ok')} />
       </div>
     }
   }
