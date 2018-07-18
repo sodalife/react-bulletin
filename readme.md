@@ -46,7 +46,8 @@ import { Bulletin } from '@sodalife/react-bulletin'
 
 let bulletin = {
   identity: '20180401.1',
-  title: '🎉 BREAKING NEWS',
+  icon: 'https://raw.githubusercontent.com/sodalife/react-bulletin/master/storybook/assets/icon-rocket.svg',
+  title: 'BREAKING NEWS',
   okText: 'OK 👌',
   message: 'Nothing Important Happened Today',
   className: 'custom-class',
@@ -113,7 +114,8 @@ import { StatelessBulletin } from '@sodalife/react-bulletin'
 
 let bulletin = {
   identity: '20180401.1',
-  title: '🎉 BREAKING NEWS',
+  icon: 'https://raw.githubusercontent.com/sodalife/react-bulletin/master/storybook/assets/icon-rocket.svg',
+  title: 'BREAKING NEWS',
   okText: 'OK 👌',
   message: 'Nothing Important Happened Today',
 }
@@ -175,6 +177,7 @@ Or run storybook on your own machine:
 | Prop      | Type     | Default           |
 | --------- | -------- | ----------------- |
 | identity  | String   | `undefined`       |
+| icon      | String   | `undefined`       |
 | title     | String   | `'BREAKING NEWS'` |
 | message   | Node     | `undefined`       |
 | okText    | String   | `'OK'`            |
@@ -194,6 +197,7 @@ Or run storybook on your own machine:
 | Prop      | Type     | Default           |
 | --------- | -------- | ----------------- |
 | identity  | String   | `undefined`       |
+| icon      | String   | `undefined`       |
 | title     | String   | `'BREAKING NEWS'` |
 | message   | Node     | `undefined`       |
 | okText    | String   | `'OK'`            |
