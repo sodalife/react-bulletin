@@ -9,6 +9,8 @@ import { Bulletin, StatelessBulletin } from '../../lib/bulletin.js'
 
 const REMOTE_BULLET_API = 'https://cors-anywhere.herokuapp.com/https://pastebin.com/raw/LWY5xHmy'
 
+const ICON_ROCKET = require('../assets/icon-rocket.svg')
+
 const stories = storiesOf('Bulletin', module)
 
 stories.addDecorator(withKnobs)
@@ -16,7 +18,8 @@ stories.addDecorator(withKnobs)
 stories.add('stateless component', () => {
   let props = {
     identity: text('identity', '1'),
-    title: text('title', '🎉 BREAKING NEWS'),
+    icon: text('icon', ICON_ROCKET),
+    title: text('title', 'BREAKING NEWS'),
     message: text('message', 'Nothing Important Happened Today'),
     okText: text('okText', 'OK 👌'),
     visible: boolean('visible', true),
@@ -32,7 +35,8 @@ stories.add('stateful component', () => {
 
       this.state = {
         identity: '1',
-        title: '🎉 BREAKING NEWS',
+        icon: ICON_ROCKET,
+        title: 'BREAKING NEWS',
         okText: 'OK 👌',
         message: 'Nothing Important Happened Today',
       }
@@ -42,17 +46,18 @@ stories.add('stateful component', () => {
       let identity = +this.state.identity + 1 + ''
       this.setState({
         identity,
-        title: '🎉 BREAKING NEWS ' + identity,
+        icon: ICON_ROCKET,
+        title: 'BREAKING NEWS ' + identity,
         okText: 'OK 👌',
         message: 'Nothing Important Happened Today',
       })
     }
 
     render () {
-      let { title, okText, message, identity } = this.state
+      let { icon, title, okText, message, identity } = this.state
       return <div>
         <p><button onClick={() => this.next()}>Next bulletin</button></p>
-        <Bulletin key={identity} {...{ identity, title, okText, message }} onOk={action('ok')} />
+        <Bulletin key={identity} {...{ identity, icon, title, okText, message }} onOk={action('ok')} />
       </div>
     }
   }
@@ -67,6 +72,7 @@ stories.add('stateful with ajax', () => {
 
       this.state = {
         identity: '',
+        icon: '',
         title: '',
         okText: '',
         message: '',
@@ -86,6 +92,7 @@ stories.add('stateful with ajax', () => {
       Bulletin.clear()
       this.setState({
         identity: '',
+        icon: '',
         title: '',
         okText: '',
         message: '',
@@ -112,6 +119,7 @@ stories.add('stateful + ajax + markdown + html', () => {
 
       this.state = {
         identity: '',
+        icon: '',
         title: '',
         okText: '',
         message: '',
@@ -135,6 +143,7 @@ stories.add('stateful + ajax + markdown + html', () => {
       Bulletin.clear()
       this.setState({
         identity: '',
+        icon: '',
         title: '',
         okText: '',
         message: '',

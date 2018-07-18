@@ -4,60 +4,63 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: hsla(255,100%,100%, 0.75);
+  background-color: rgba(85,85,85,0.3);
   z-index: 10;
 }
 
 .modal {
   position: absolute;
   bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 12px;
-  background-color: hsl(50, 100%, 50%);
-  background-image: linear-gradient(135deg,hsl(50, 100%, 65%),hsl(50, 100%, 55%));
-  line-height: 2em;
-  padding: 2em;
-  padding-bottom: calc(2em + env(safe-area-inset-bottom));
-  padding-bottom: calc(2em + constant(safe-area-inset-bottom));
-  max-height: 61.8%;
+  padding-top: 36px;
   width: 100%;
-  box-shadow: 0 0 12px rgba(0,0,0,0.25);
-  box-sizing: border-box;
-}
-
-.title {
-  font-size: 18px;
-  color: hsl(0, 0%, 20%);
-  padding: 0 0 1em 0;
-  border-bottom: 1px dashed hsl(0, 0%, 20%);
-}
-
-.message {
-  padding: 1em 0;
-  color: hsl(0, 0%, 30%);
-  overflow-y: auto;
-}
-
-.close {
-  text-align: right;
-  padding-top: 1em;
-}
-.ok {
-  padding: 0.5em 1em;
-  font-size: 12px;
-  color: hsl(0,0%,20%);
-  background: hsl(0, 0%, 100%);
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 0 6px #fff;
-  animation-duration: 2.4s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-name: flash;
-  &:active {
-    background-color: hsl(0,0%,95%);
+  background: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  .icon {
+    position: relative;
+    width: 100%;
+    height: calc(106px - 45px - 36px);
+    top: calc(-45px - 36px);
+    margin-bottom: 10px;
+    img {
+      height: 106px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  .title {
+    margin-bottom: 4px;
+    padding: 0 24px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #333;
+  }
+  .message {
+    margin-bottom: 22px;
+    padding: 0 24px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+  }
+  .close {
+    display: block;
+    margin-top: 22px;
+    width: 100%;
+    .ok {
+      padding: 14px 24px;
+      width: 100%;
+      font-size: 14px;
+      line-height: 20px;
+      background: #65d065;
+      color: #fff;
+      text-align: center;
+      border: none;
+      animation-duration: 3.6s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+      animation-name: shake;
+    }
   }
 }
 
@@ -88,15 +91,25 @@
   }
 }
 
-@keyframes flash {
+@keyframes shake {
   from,
-  50%,
+  20%,
   to {
-    box-shadow: 0 0 12px #fff;
+    transform: translate3d(0, 0, 0);
   }
 
-  25%,
-  75% {
-    box-shadow: 0 0 0 #fff;
+  2%,
+  6%,
+  10%,
+  14%,
+  18% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  4%,
+  8%,
+  12%,
+  16% {
+    transform: translate3d(4px, 0, 0);
   }
 }

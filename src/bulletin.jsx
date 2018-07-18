@@ -17,6 +17,7 @@ const cache = new Cache(CACHE_KEY.PREFIX)
 export class Bulletin extends Component {
   static propTypes = {
     identity: PropTypes.string,
+    icon: PropTypes.string,
     title: PropTypes.string,
     message: PropTypes.node,
     okText: PropTypes.string,
